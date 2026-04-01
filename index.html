@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAFTIX CLAN | Minecraft Elite</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --mc-green: #55ff55; /* لون ماين كرافت الأخضر */
+            --mc-dark-green: #388e3c;
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-Wild-Update_600x337.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Nav */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--mc-green);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--mc-green);
+            text-shadow: 2px 2px #000;
+        }
+
+        /* Hero */
+        header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 5rem;
+            color: var(--mc-green);
+            text-shadow: 4px 4px #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        header p { font-size: 1.2rem; background: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 5px; }
+
+        /* Members Grid */
+        .section { padding: 80px 5%; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .member-card {
+            background: var(--card-bg);
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-card:hover {
+            border-color: var(--mc-green);
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(85, 255, 85, 0.2);
+        }
+
+        .rank-badge {
+            background: var(--mc-green);
+            color: black;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .skin-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px;
+            background: #222;
+            border: 2px dashed var(--mc-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skin-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: pixelated; /* ميزة تخلي سكنات ماين كرافت تبان حادة */
+        }
+
+        /* Footer Custom */
+        footer {
+            background: #000;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 4px solid var(--mc-dark-green);
+        }
+
+        .dev-link {
+            color: var(--mc-green);
+            text-decoration: none;
+            font-weight: 900;
+            border-bottom: 1px solid var(--mc-green);
+        }
+
+        .social-btn {
+            display: block;
+            margin-top: 15px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CRAFTIX</div>
+        <div style="color: white; font-weight: bold;">Minecraft Clan</div>
+    </nav>
+
+    <header>
+        <h1>CRAFTIX</h1>
+        <p>الكلان الرسمي لمحترفي ماين كرافت | سيرفرات ومغامرات بلا حدود</p>
+    </header>
+
+    <section id="members" class="section">
+        <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 20px;">قائمة الأساطير</h2>
+        <div class="grid" id="clan-members">
+            </div>
+    </section>
+
+    <section id="about" class="section">
+        <div style="max-width: 800px; margin: 0 auto; background: rgba(0,0,0,0.7); padding: 40px; border-radius: 10px; border-right: 5px solid var(--mc-green);">
+            <h2>من نحن - About Us</h2>
+            <p>نحن كلان متخصص في لعبة Minecraft. نجمع بين البناء الاحترافي، الـ PVP، هدفنا هو بناء أقوى مجتمع ماين كرافتي عربي.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - كلان CRAFTIX</p>
+        <p style="margin-top: 10px;">Powered by <a href="https://www.instagram.com/yacinesahi_dev/" class="dev-link">yacinesahi_dev</a></p>
+    </footer>
+
+    <script>
+        // مصفوفة الأعضاء (6 أعضاء + القادة)
+        const clanMembers = [
+            {
+                name: "SOFIAN",
+                rank: "الزعيم الرسمي / Leader",
+                bio: "القائد العام لكلان Craftix والمسؤول عن قرارات الفريق الكبرى.",
+                skin: "sofian.jpg", // حط رابط الصورة هنا
+                ig: "@sofian.craft"
+            },
+            {
+                name: "YACINE",
+                rank: "القائد التقني / Lead Dev",
+                bio: "خبير الأمن السيبراني ومبرمج أنظمة الكلان والموقع الرسمي.",
+                skin: "yacine.png", // حط رابط الصورة هنا
+                ig: "@yacinesahi_dev"
+            },
+            {
+                name: "Omar",
+                rank: "محارب / Warrior",
+                bio: "متخصص في معارك الـ PVP وبناء القلاع الحصينة.",
+                skin: "omar.jpg",
+                ig: "@omar288922"
+            },
+            {
+                name: "ABDELNOUR",
+                rank: "بناء / Builder",
+                bio: "مهندس المعالم والمدن داخل سيرفرات الكلان.",
+                skin: "Abdelnour.jpg",
+                ig: "@abdelnourofficial334"
+            },
+            {
+                name: "Ilyas",
+                rank: "منقب / Miner",
+                bio: "المسؤول عن توفير الموارد النادرة وتطوير العتاد.",
+                skin: "ilyas.jpg",
+                ig: "@ilyascraft522"
+            },
+            {
+                name: "Nitro",
+                rank: " عضو نخبة1 / Elite",
+                bio: "مغامر متميز يشارك في جميع فعاليات الكلان.",
+                skin: "nitro.jpg",
+                ig: "@nitroangry"
+            }
+        ];
+
+        const container = document.getElementById('clan-members');
+
+        clanMembers.forEach(m => {
+            container.innerHTML += `
+                <div class="member-card">
+                    <span class="rank-badge">${m.rank}</span>
+                    <div class="skin-container">
+                        <img src="${m.skin}" alt="${m.name}" class="skin-img" onerror="this.src='https://www.minecraftskins.com/uploads/skins/2023/01/01/default-skin.png'">
+                    </div>
+                    <h3>${m.name}</h3>
+                    <p style="font-size: 0.9rem; color: #aaa; margin: 10px 0;">${m.bio}</p>
+                    <a href="#" class="social-btn">حساب التواصل: ${m.ig}</a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
